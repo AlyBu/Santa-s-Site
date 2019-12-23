@@ -1,6 +1,13 @@
 body {
     background: #444;
     width: 100%;
+    animation: turn-red 2000ms;
+    animation-delay: 4s;
+}
+
+@keyframes turn-red {
+    from {  background: #444; }
+    to { background: darkred; }
 }
 
 .box {
@@ -13,6 +20,18 @@ body {
     transform-style: preserve-3d;
     transform: rotateX(80deg) rotateZ(45deg);
     border: black solid 1px;
+    animation: get-in-the-box 3000ms, moveBox 3000ms;
+    animation-delay: 3s;
+}
+
+@keyframes get-in-the-box {
+    from { width: 25%; padding-bottom: 25%;}
+    to { width: 40%; padding-bottom: 40%;}
+}
+
+@keyframes moveBox {
+    from { transform: rotateX(80deg) rotateZ(45deg) ;}
+    to { transform: rotateX(37deg) rotateZ(45deg) ;}
 }
 
 .box::before, .box::after {
@@ -52,6 +71,12 @@ body {
     transform-style: preserve-3d;
     transform: rotateX(80deg) rotateZ(45deg);
     border: black solid 1px;
+    animation:  open-present 3000ms ease-out;
+}
+
+@keyframes open-present {
+    from {transform: rotateX(80deg) rotateZ(45deg) translateZ(0); }
+    to {transform: rotateX(80deg) rotateZ(45deg) translateZ(150px); }
 }
 
 .top::before, .top::after {
@@ -150,9 +175,9 @@ body {
     position: absolute;
     width: 20%;
     height: 100%;
-    top: 60%;
-    left: 50%;
-    transform: rotateX(90deg) translateY(-48%);
+    top: 50.5%;
+    left: 40%;
+    transform: rotateX(90deg) translateY(-50%);
 }
 
 .line-box-right {
@@ -161,7 +186,7 @@ body {
     position: absolute;
     width: 20%;
     height: 100%;
-    top: 10%;
-    left: 100%;
-    transform: rotateZ(270deg) rotateX(90deg) translateY(-48%);
+    top: 1%;
+    left: 90.5%;
+    transform: rotateZ(270deg) rotateX(90deg) translateY(-50.5%);
 }
