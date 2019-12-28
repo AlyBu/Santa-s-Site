@@ -8,7 +8,6 @@ body {
 }
 
 .flash {
-
     display: inline;
     top: 0;
     z-index: 10;
@@ -114,7 +113,7 @@ body {
     z-index: 2;
     background: linear-gradient(to left, crimson, darkred);
     position: absolute;
-    left: 37.5%;
+    left: 37%;
     top: -1%;
     margin: 0 auto;
     width: 26%;
@@ -240,4 +239,421 @@ body {
     top: 1%;
     left: 90.5%;
     transform: rotateZ(270deg) rotateX(90deg) translateY(-50.5%);
+}
+
+.open-page {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(ellipse at top right, cornflowerblue 0%, #1B2957 100%);
+}
+
+.mountain {
+    position: absolute;
+    bottom: 0;
+    left: -90px;
+    border-width: 35em 25em;
+    border-style: solid;
+    border-color: transparent transparent #93A4B4 transparent;
+    z-index: 2;
+}
+
+.peak-snow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+
+.shadow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translate(50%);
+    opacity: 0.7;
+    width: 676px;
+    height: 540px;
+}
+
+.shadow.b {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translate(50%);
+    opacity: 0.7;
+    width: 676px;
+    height: 400px;
+}
+
+.mountain.b {
+    border-color: transparent transparent #657084 transparent;
+    bottom: 0;
+    position: absolute;
+    left: 30%;
+    border-width: 25em 20em;
+    border-style: solid;
+    z-index: 2;
+}
+
+.shape-peak {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+
+.ground {
+    z-index: 2;
+    background-color: ivory;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.ground > div {
+    border-bottom: none;
+    border-radius: .5em .5em 0 0;
+    transform: perspective(.5em) rotateX(5deg);
+    transform-origin: bottom;
+}
+
+.hill.a {
+    background-color: inherit;
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    right: 30px;
+    transform: perspective(.4em) rotateX(8deg);
+}
+
+.hill.b {
+    background-color: inherit;
+    width: 400px;
+    height: 90px;
+    position: absolute;
+    top: -90px;
+    right: 200px;
+}
+
+.hill.c {
+    background-color: inherit;
+    width: 300px;
+    height: 220px;
+    position: absolute;
+    top: -220px;
+    right: 400px;
+}
+
+.hill.d {
+    background-color: inherit;
+    width: 400px;
+    height: 230px;
+    position: absolute;
+    top: -250px;
+    right: 150px;
+    transform: perspective(.5em) rotateX(7deg);
+}
+
+.hill.e {
+    background-color: inherit;
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top: -60px;
+    right: 600px;
+}
+
+.hill.f {
+    background-color: inherit;
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    right: 700px;
+}
+
+.hill.g {
+    background-color: inherit;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: -100px;
+    right: 70%;
+    transform: perspective(.6em) rotateX(8deg);
+}
+
+.hill.h {
+    background-color: inherit;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.hill.i {
+    background-color: inherit;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    top: -90px;
+    left: 70px;
+}
+
+/*tree*/
+.tree {
+    position: absolute;
+    left: 75%;
+    bottom: 10%;
+}
+
+.triangle {
+    z-index: 5;
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+    border-width: 30em 5em;
+    border-style: solid;
+    border-color: transparent transparent #007800 transparent;
+    transform: translateX(2px);
+}
+
+.triangle.a {
+    z-index: 6;
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+    border-width: 30em 1em;
+    border-style: solid;
+    border-color: transparent transparent #009000 transparent;
+    transform-style: preserve-3d;
+    transform: skewY(10deg) translateX(65px) rotateZ(-5deg);
+}
+
+.triangle.b {
+    z-index: 6;
+    position: absolute;
+    border-width: 30em 1em;
+    border-style: solid;
+    border-color: transparent transparent #00B000 transparent;
+    transform-style: preserve-3d;
+    transform: skewY(21deg) translateX(65px) rotateZ(-1.9deg);
+}
+
+.triangle.c {
+    z-index: 7;
+    position: absolute;
+    border-width: 30em 1em;
+    border-style: solid;
+    border-color: transparent transparent #00A800 transparent;
+    transform-style: preserve-3d;
+    transform: skewY(-21deg) translateY(49px) translateX(66px) rotateZ(2deg);
+}
+
+.triangle.d {
+    z-index: 6;
+    position: absolute;
+    bottom: 7%;
+    left: 70%;
+    border-width: 30em 1em;
+    border-style: solid;
+    border-color: transparent transparent #009000 transparent;
+    transform-style: preserve-3d;
+    transform: skewY(-10deg) translateY(20px) translateX(66px) rotateZ(5deg);
+}
+
+/*snowman*/
+.snowman{
+    z-index: 5;
+    position: relative;
+    left: 5%;
+    bottom: -70%;
+}
+
+.face{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 50px;
+    left: 55px;
+}
+
+.shadow1{
+    height:55px;
+    width: 55px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    left: -1px;
+    box-shadow: 4px 0 0 2px rgba(0,0,0,0.1);
+}
+
+.eyel,.eyer{
+    background-color: #000000;
+    height: 7px;
+    width: 7px;
+    border-radius: 25%;
+    position: relative;
+}
+
+.eyel{
+    top:20px;
+    left:17px;
+}
+
+.eyer{
+    top:12px;
+    left:37px;
+}
+
+.nose{
+    height: 0;
+    width: 0;
+    border-top: 15px solid #f7880f;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    position: relative;
+    top: 17px;
+    left: 28px;
+}
+
+.hat{
+    height: 5px;
+    width: 60px;
+    background-color: #2b303a;
+    position: relative;
+    bottom: 27px;
+    transform: rotate(20deg);
+    border-radius: 2px;
+    left: 7px;
+}
+
+.h-top{
+    height: 0;
+    width: 30px;
+    border-bottom: 21px solid #2b303a;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: relative;
+    bottom: 21px;
+    left: 12px;
+
+}
+
+.body{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    top: 45px;
+    left: 35px;
+}
+
+.shadow2{
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    box-shadow: 4px 0 0 2px rgba(0,0,0,0.1);
+    position: relative;
+    top: 2px;
+    right: 1px;
+}
+
+.scarf{
+    height: 0;
+    width: 10px;
+    border-bottom: 25px solid #e63c33;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: relative;
+    bottom: 45px;
+    left: 97px;
+    transform:rotate(-15deg);
+}
+
+.sc1{
+    background-color: #e74339;
+    height: 17px;
+    width: 60px;
+    position: relative;
+    bottom: 17px;
+    right: 42px;
+    border-radius: 5px;
+    transform: rotate(15deg);
+}
+
+.sc2{
+    height: 0;
+    width: 19px;
+    border-bottom: 35px solid #e74339;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: relative;
+    bottom: 22px;
+    right: 12px;
+    transform:rotate(0deg);
+}
+
+.buttons{
+    position: relative;
+    bottom: 60px;
+    left: 45px;
+}
+
+.b1,.b2,.b3{
+    height: 7px;
+    width: 7px;
+    border-radius:50%;
+    background-color: #2b303a;
+    margin-bottom: 10px;
+}
+
+.hand-l{
+    background-color: #84382a;
+    height: 2px;
+    width: 50px;
+    position: relative;
+    bottom: 130px;
+    right: 32px;
+    transform: rotate(25deg);
+}
+
+.hand-r{
+    background-color: #84382a;
+    height: 2px;
+    width: 50px;
+    position: relative;
+    bottom: 134px;
+    transform: rotate(-25deg);
+    left: 82px;
+}
+
+.s1{
+    background-color: #84382a;
+    height: 2px;
+    width: 15px;
+    position: relative;
+    bottom: 5px;
+    left: 2px;
+    transform: rotate(45deg);
+
+}
+
+.s2{
+    background-color: #84382a;
+    height: 2px;
+    width: 15px;
+    position: relative;
+    bottom: 5px;
+    left: 32px;
+    transform: rotate(-45deg);
 }
