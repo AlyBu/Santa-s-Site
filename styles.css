@@ -4,7 +4,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .flash {
@@ -242,7 +242,7 @@ body {
 }
 
 .open-page {
-    position: absolute;
+    overflow: hidden;
     height: 100vh;
     width: 100%;
     background: radial-gradient(ellipse at top right, cornflowerblue 0%, #1B2957 100%);
@@ -319,6 +319,12 @@ body {
     border-radius: .5em .5em 0 0;
     transform: perspective(.5em) rotateX(5deg);
     transform-origin: bottom;
+}
+
+.hill {
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
 }
 
 .hill.a {
@@ -467,15 +473,104 @@ body {
     transform: skewY(-10deg) translateY(20px) translateX(66px) rotateZ(5deg);
 }
 
+.ornament {
+    z-index: 11;
+    position: absolute;
+    width: 9.7em;
+    height: 30px;
+    border-bottom: solid red 2px;
+    border-radius: 50%;
+    transform: translateX(7px) translateY(-40px) rotateZ(10deg);
+    box-shadow: 1px 1px darkred;
+}
+
+.ornament:nth-child(1) {
+    content: '';
+    position: absolute;
+    width: 9.7em;
+    height: 30px;
+    transform: translateX(7px) translateY(-40px) rotateZ(10deg);
+}
+
+.ornament:nth-child(2) {
+    content: '';
+    border-bottom: solid yellow 2px;
+    box-shadow: 1px 1px darkgoldenrod;
+    position: absolute;
+    width: 8.7em;
+    height: 30px;
+    transform: translateX(10px) translateY(-90px) rotateZ(-10deg);
+}
+
+.ornament:nth-child(3) {
+    content: '';
+    border-bottom: solid darkmagenta 2px;
+    box-shadow: 1px 1px rebeccapurple;
+    position: absolute;
+    width: 8em;
+    height: 30px;
+    transform: translateX(14px) translateY(-150px) rotateZ(-20deg);
+}
+
+.ornament:nth-child(4) {
+    content: '';
+    border-bottom: solid aqua 2px;
+    box-shadow: 1px 1px cornflowerblue;
+    position: absolute;
+    width: 6.3em;
+    height: 30px;
+    transform: translateX(33px) translateY(-210px) rotateZ(15deg);
+}
+
+.ornament:nth-child(5) {
+    content: '';
+    border-bottom: solid hotpink 2px;
+    box-shadow: 1px 1px deeppink;
+    position: absolute;
+    width: 5em;
+    height: 20px;
+    transform: translateX(42px) translateY(-260px) rotateZ(5deg);
+}
+
+.ornament:nth-child(6) {
+    content: '';
+    border-bottom: solid coral 2px;
+    box-shadow: 1px 1px chocolate;
+    position: absolute;
+    width: 4.1em;
+    height: 20px;
+    transform: translateX(47px) translateY(-310px) rotateZ(-15deg);
+}
+
+.ornament:nth-child(7) {
+    content: '';
+    border-bottom: solid blue 2px;
+    box-shadow: 1px 1px darkblue;
+    position: absolute;
+    width: 3.2em;
+    height: 20px;
+    transform: translateX(57px) translateY(-350px) rotateZ(10deg);
+}
+
+.ornament:nth-child(8) {
+    content: '';
+    border-bottom: solid tomato 2px;
+    box-shadow: 1px 1px crimson;
+    position: absolute;
+    width: 2.3em;
+    height: 10px;
+    transform: translateX(63px) translateY(-390px) rotateZ(-15deg);
+}
+
 /*snowman*/
-.snowman{
+.snowman {
     z-index: 5;
     position: relative;
     left: 5%;
     bottom: -70%;
 }
 
-.face{
+.face {
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -485,7 +580,7 @@ body {
     left: 55px;
 }
 
-.shadow1{
+.shadow1 {
     height:55px;
     width: 55px;
     background-color: transparent;
@@ -496,7 +591,7 @@ body {
     box-shadow: 4px 0 0 2px rgba(0,0,0,0.1);
 }
 
-.eyel,.eyer{
+.eyel,.eyer {
     background-color: #000000;
     height: 7px;
     width: 7px;
@@ -504,17 +599,17 @@ body {
     position: relative;
 }
 
-.eyel{
+.eyel {
     top:20px;
     left:17px;
 }
 
-.eyer{
+.eyer {
     top:12px;
     left:37px;
 }
 
-.nose{
+.nose {
     height: 0;
     width: 0;
     border-top: 15px solid #f7880f;
@@ -525,7 +620,7 @@ body {
     left: 28px;
 }
 
-.hat{
+.hat {
     height: 5px;
     width: 60px;
     background-color: #2b303a;
@@ -536,7 +631,7 @@ body {
     left: 7px;
 }
 
-.h-top{
+.h-top {
     height: 0;
     width: 30px;
     border-bottom: 21px solid #2b303a;
@@ -548,7 +643,7 @@ body {
 
 }
 
-.body{
+.body {
     height: 100px;
     width: 100px;
     background-color: white;
@@ -558,7 +653,7 @@ body {
     left: 35px;
 }
 
-.shadow2{
+.shadow2 {
     height: 95px;
     width: 95px;
     border-radius: 50%;
@@ -568,7 +663,7 @@ body {
     right: 1px;
 }
 
-.scarf{
+.scarf {
     height: 0;
     width: 10px;
     border-bottom: 25px solid #e63c33;
@@ -580,7 +675,7 @@ body {
     transform:rotate(-15deg);
 }
 
-.sc1{
+.sc1 {
     background-color: #e74339;
     height: 17px;
     width: 60px;
@@ -591,7 +686,7 @@ body {
     transform: rotate(15deg);
 }
 
-.sc2{
+.sc2 {
     height: 0;
     width: 19px;
     border-bottom: 35px solid #e74339;
@@ -603,13 +698,13 @@ body {
     transform:rotate(0deg);
 }
 
-.buttons{
+.buttons {
     position: relative;
     bottom: 60px;
     left: 45px;
 }
 
-.b1,.b2,.b3{
+.b1,.b2,.b3 {
     height: 7px;
     width: 7px;
     border-radius:50%;
@@ -617,7 +712,7 @@ body {
     margin-bottom: 10px;
 }
 
-.hand-l{
+.hand-l {
     background-color: #84382a;
     height: 2px;
     width: 50px;
@@ -627,7 +722,7 @@ body {
     transform: rotate(25deg);
 }
 
-.hand-r{
+.hand-r {
     background-color: #84382a;
     height: 2px;
     width: 50px;
@@ -637,7 +732,7 @@ body {
     left: 82px;
 }
 
-.s1{
+.s1 {
     background-color: #84382a;
     height: 2px;
     width: 15px;
@@ -645,10 +740,9 @@ body {
     bottom: 5px;
     left: 2px;
     transform: rotate(45deg);
-
 }
 
-.s2{
+.s2 {
     background-color: #84382a;
     height: 2px;
     width: 15px;
@@ -657,3 +751,78 @@ body {
     left: 32px;
     transform: rotate(-45deg);
 }
+
+/*second page*/
+.second-page {
+    z-index: 11;
+    position: relative;
+    display: inline-block;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(ellipse at top, #1B2957 0%, darkblue 100%);
+}
+
+.icicle {
+    position: absolute;
+    top: 0;
+    border-style: solid;
+    border-color: white transparent  transparent transparent;
+}
+
+.icicle:nth-child(1) {
+    left: 10%;
+    border-width: 7em 0.5em;
+}
+
+.icicle:nth-child(2) {
+    left: 0;
+    border-width: 7em 0.5em;
+}
+
+.icicle:nth-child(3) {
+    left: 2%;
+    border-width: 10em 1em;
+}
+
+.icicle:nth-child(4) {
+    left: 85%;
+    border-width: 15em 1em;
+}
+
+.icicle:nth-child(5) {
+    left: 90%;
+    border-width: 10em 1em;
+}
+
+.icicle:nth-child(6) {
+    left: 70%;
+    border-width: 5em 0.5em;
+}
+
+.icicle:nth-child(7) {
+    left: 60%;
+    border-width: 9em 0.5em;
+}
+
+.icicle:nth-child(8) {
+    left: 40%;
+    border-width: 8em 0.4em;
+}
+
+.icicle:nth-child(9) {
+    left: 45%;
+    border-width: 4em 0.2em;
+}
+
+.icicle:nth-child(10) {
+    left: 30%;
+    border-width: 11em 0.5em;
+}
+
+.icicle:nth-child(11) {
+    right: 0;
+    border-width: 12em 0.5em;
+}
+
