@@ -768,7 +768,7 @@ body {
     position: absolute;
     top: 0;
     border-style: solid;
-    border-color: white transparent  transparent transparent;
+    border-color: white transparent transparent transparent;
 }
 
 .icicle:nth-child(1) {
@@ -826,3 +826,261 @@ body {
     border-width: 12em 0.5em;
 }
 
+/*reindeer*/
+.reindeer {
+    position: absolute;
+    top: 150px;
+    left: 40px;
+    /*transform: rotateZ(10deg);*/
+}
+
+.mouth {
+    width: 50px;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: chocolate;
+    transform: perspective(.9em) rotateX(-10deg);
+}
+
+.mouth::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 16px;
+    top: 6px;
+    left: 2px;
+    background-color: chocolate;
+    transform: rotateZ(20deg);
+}
+
+.neck {
+    z-index: 4;
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    top: 38px;
+    left: 29px;
+    background-color: chocolate;
+    transform: perspective(.9em) rotateX(10deg) rotateZ(-80deg);
+}
+
+.belly {
+    z-index: 5;
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    background-color: chocolate;
+    transform: perspective(.3em) rotateX(-4deg);
+    border-radius: 30%;
+}
+
+.belly::after {
+    content: '';
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 88px;
+    background-color: chocolate;
+    border-radius: 50%;
+    transform: translateX(-110px);
+}
+
+.leg-front-up {
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    top: 133px;
+    left: 24px;
+    background-color: chocolate;
+    transform: perspective(.9em) rotateX(-10deg) rotateZ(-80deg);
+}
+
+.leg-front-down {
+    position: absolute;
+    width: 50px;
+    height: 7px;
+    top: 186px;
+    left: 38px;
+    background-color: chocolate;
+    transform: perspective(.5em) rotateX(-10deg) rotateZ(60deg);
+}
+
+.leg-front-behind {
+    position: absolute;
+    left: 20px;
+}
+
+.leg-behind {
+    position: absolute;
+    width: 60px;
+    height: 7px;
+    top: 188px;
+    left: 131px;
+    background-color: chocolate;
+    transform: perspective(.5em) rotateX(-10deg) rotateZ(90deg);
+}
+
+.leg-behind-behind {
+    position: absolute;
+    width: 60px;
+    height: 7px;
+    top: 188px;
+    left: 118px;
+    background-color: chocolate;
+    transform: perspective(.5em) rotateX(-10deg) rotateZ(90deg);
+}
+
+.reindeer .nose {
+    position: absolute;
+    top: 19px;
+    left: 28px;
+    border-width: 0.5em 0.2em;
+    border-style: solid;
+    border-color: #462620 transparent transparent;
+}
+
+.eye {
+    position: absolute;
+    top: 23px;
+    left: 60px;
+    height: 0.01em;
+    width: 0.2em;
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pupil {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: 0.01em;
+    width: 0.01em;
+    background-color: black;
+    border-style: solid;
+    border-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*.pupil::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: -3px;*/
+/*    top: -3px;*/
+/*    height: 0.01em;*/
+/*    width: 0.01em;*/
+/*    background-color: #00B000;*/
+/*    border-style: solid;*/
+/*    border-color: #00B000;*/
+/*    border-bottom-left-radius: 10px;*/
+/*    border-bottom-right-radius: 10px;*/
+/*}*/
+
+.horn-start {
+    position: absolute;
+    top: 7px;
+    left: 60px;
+    width: 0.2em;
+    height: 0.8em;
+    background-color: #461906;
+}
+
+.horn-top {
+    position: absolute;
+    top: -36px;
+    left: 27px;
+    width: 3em;
+    height: 2em;
+    border-bottom: solid #461906 2px;
+    transform: rotateZ(100deg);
+    box-shadow: 3px 1px #461906;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.horn-side {
+    position: absolute;
+    top: -20px;
+    left: 33px;
+    width: 2em;
+    height: 1em;
+    border-bottom: solid #461906 2px;
+    transform: rotateZ(100deg);
+    box-shadow: 3px 1px #461906;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.horn2 {
+    position: absolute;
+    left: 130px;
+    transform: rotateY(180deg);
+}
+
+.rope-mouth {
+    z-index: 6;
+    position: absolute;
+    top: 21px;
+    left: 35px;
+    width: 1.5em;
+    height: 0.5em;
+    border-bottom: solid red 8px;
+    border-radius: 50%;
+    transform: rotateZ(-100deg);
+    /*box-shadow: 1px 1px darkred;*/
+}
+
+.rope-connection {
+    z-index: 6;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    width: 6em;
+    height: 4em;
+    border-bottom: solid red 2px;
+    border-radius: 50%;
+    transform: rotateZ(40deg);
+}
+
+.rope-connection2 {
+    content: '';
+    z-index: 3;
+    position: absolute;
+    top: 56px;
+    left: 29px;
+    width: 8em;
+    height: 3em;
+    border-bottom: solid red 2px;
+    border-radius: 50%;
+    transform: rotateZ(50deg);
+}
+
+.rope-body {
+    z-index: 7;
+    position: absolute;
+    top: 64px;
+    left: 50px;
+    width: 3.7em;
+    height: 4.5em;
+    border-bottom: solid red 30px;
+    border-radius: 50%;
+    transform: rotateZ(-100deg);
+}
+
+.tail {
+    position: absolute;
+    top: 90px;
+    left: 145px;
+    border-width: 0.4em 1.5em;
+    border-style: solid;
+    border-color: transparent chocolate transparent transparent;
+    transform: rotateZ(-25deg);
+}
