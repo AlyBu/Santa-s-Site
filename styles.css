@@ -20,8 +20,12 @@ body {
 }
 
 @keyframes flashing {
-    from { background: transparent; }
-    to { background: white; }
+    from {
+        background: transparent;
+    }
+    to {
+        background: white;
+    }
 }
 
 .box {
@@ -39,13 +43,23 @@ body {
 }
 
 @keyframes get-in-the-box {
-    from { width: 25%; padding-bottom: 25%;}
-    to { width: 80%; padding-bottom: 80%;}
+    from {
+        width: 25%;
+        padding-bottom: 25%;
+    }
+    to {
+        width: 80%;
+        padding-bottom: 80%;
+    }
 }
 
 @keyframes moveBox {
-    from { transform: rotateX(80deg) rotateZ(45deg) ;}
-    to { transform: rotateX(37deg) rotateZ(45deg) ;}
+    from {
+        transform: rotateX(80deg) rotateZ(45deg);
+    }
+    to {
+        transform: rotateX(37deg) rotateZ(45deg);
+    }
 }
 
 .box::before, .box::after {
@@ -121,12 +135,16 @@ body {
     transform-style: preserve-3d;
     transform: rotateX(80deg) rotateZ(45deg);
     border: black solid 1px;
-    animation:  open-present 3000ms ease-out;
+    animation: open-present 3000ms ease-out;
 }
 
 @keyframes open-present {
-    from {transform: rotateX(80deg) rotateZ(45deg) translateZ(0); }
-    to {transform: rotateX(80deg) rotateZ(45deg) translateZ(150px); }
+    from {
+        transform: rotateX(80deg) rotateZ(45deg) translateZ(0);
+    }
+    to {
+        transform: rotateX(80deg) rotateZ(45deg) translateZ(150px);
+    }
 }
 
 .top::before, .top::after {
@@ -581,17 +599,17 @@ body {
 }
 
 .shadow1 {
-    height:55px;
+    height: 55px;
     width: 55px;
     background-color: transparent;
     border-radius: 50%;
     position: relative;
     top: 2px;
     left: -1px;
-    box-shadow: 4px 0 0 2px rgba(0,0,0,0.1);
+    box-shadow: 4px 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
-.eyel,.eyer {
+.eyel, .eyer {
     background-color: #000000;
     height: 7px;
     width: 7px;
@@ -600,16 +618,16 @@ body {
 }
 
 .eyel {
-    top:20px;
-    left:17px;
+    top: 20px;
+    left: 17px;
 }
 
 .eyer {
-    top:12px;
-    left:37px;
+    top: 12px;
+    left: 37px;
 }
 
-.nose {
+.snowman .face .nose {
     height: 0;
     width: 0;
     border-top: 15px solid #f7880f;
@@ -643,7 +661,7 @@ body {
 
 }
 
-.body {
+.snowman .body {
     height: 100px;
     width: 100px;
     background-color: white;
@@ -657,7 +675,7 @@ body {
     height: 95px;
     width: 95px;
     border-radius: 50%;
-    box-shadow: 4px 0 0 2px rgba(0,0,0,0.1);
+    box-shadow: 4px 0 0 2px rgba(0, 0, 0, 0.1);
     position: relative;
     top: 2px;
     right: 1px;
@@ -672,7 +690,7 @@ body {
     position: relative;
     bottom: 45px;
     left: 97px;
-    transform:rotate(-15deg);
+    transform: rotate(-15deg);
 }
 
 .sc1 {
@@ -695,7 +713,7 @@ body {
     position: relative;
     bottom: 22px;
     right: 12px;
-    transform:rotate(0deg);
+    transform: rotate(0deg);
 }
 
 .buttons {
@@ -704,10 +722,10 @@ body {
     left: 45px;
 }
 
-.b1,.b2,.b3 {
+.b1, .b2, .b3 {
     height: 7px;
     width: 7px;
-    border-radius:50%;
+    border-radius: 50%;
     background-color: #2b303a;
     margin-bottom: 10px;
 }
@@ -1084,3 +1102,584 @@ body {
     border-color: transparent chocolate transparent transparent;
     transform: rotateZ(-25deg);
 }
+
+/*sleigh*/
+.sleigh {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    transform: rotateY(-180deg);
+}
+
+.spiral {
+    transform: rotateZ(100deg);
+}
+
+.sleigh .line {
+    position: absolute;
+    top: 7.84em;
+    left: -2em;
+    width: 9em;
+    border: 2px grey solid;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 20%;
+}
+
+.sleigh .tri {
+    position: absolute;
+    top: 6.1em;
+    left: 0;
+    border-style: solid;
+    border-width: 1em 0.5em;
+    border-color: transparent transparent grey transparent;
+}
+
+.sleigh .tri::after {
+    content: '';
+    position: absolute;
+    top: -1em;
+    left: 1em;
+    border-style: solid;
+    border-width: 1em 0.5em;
+    border-color: transparent transparent grey transparent;
+}
+
+.sleigh .tri::before {
+    content: '';
+    position: absolute;
+    top: -1em;
+    left: 2.5em;
+    border-style: solid;
+    border-width: 1em 0.5em;
+    border-color: transparent transparent grey transparent;
+}
+
+.sleigh .square {
+    z-index: 2;
+    position: absolute;
+    top: 4.2em;
+    left: -2em;
+    width: 5em;
+    height: 3em;
+    background-color: green;
+    border-radius: 20%;
+    border-top: solid 1px red;
+}
+
+.sleigh .square::after {
+    content: '';
+    position: absolute;
+    top: 1.43em;
+    left: 3em;
+    width: 4.7em;
+    height: 1.55em;
+    background-color: green;
+}
+
+.sleigh .square::before {
+    content: '';
+    position: absolute;
+    top: .5em;
+    left: 6.43em;
+    width: 1.25em;
+    height: 2em;
+    background-color: green;
+    border-radius: 20%;
+}
+
+.sleigh .little-santa {
+    z-index: 3;
+    font-size: 0.7em;
+    transform: translateX(3.1em) translateY(-16em);
+}
+
+.sleigh .body-little-santa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5em;
+    width: 4em;
+    background-color: red;
+    border-style: solid;
+    border-color: red;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    transform: rotateZ(180deg);
+}
+
+.sleigh .head-little-santa .face-little-santa {
+    z-index: 0;
+    position: absolute;
+    top: -1em;
+    left: .5em;
+    height: 2.5em;
+    width: 3em;
+    background-color: wheat;
+    border-style: solid;
+    border-color: wheat;
+    border-radius: 50%;
+    box-shadow: 0 10px white;
+    /*box-sizing: border-box;*/
+}
+
+.sleigh .head-little-santa .eyel-little-santa {
+    position: absolute;
+    top: 0;
+    left: 1.4em;
+    height: .5em;
+    width: .5em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sleigh .head-little-santa .eyel-little-santa::after {
+    content: '';
+    position: absolute;
+    top: .1em;
+    left: .1em;
+    height: .3em;
+    width: .3em;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.sleigh .head-little-santa .eyer-little-santa {
+    position: absolute;
+    top: 0;
+    left: 2.1em;
+    height: .5em;
+    width: .5em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sleigh .head-little-santa .eyer-little-santa::after {
+    content: '';
+    position: absolute;
+    top: .1em;
+    left: .1em;
+    height: .3em;
+    width: .3em;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.sleigh .head-little-santa .mouth-little-santa {
+    position: absolute;
+    top: .4em;
+    left: 1.8em;;
+    width: .5em;
+    height: .7em;
+    border-bottom: solid #df6b69 2px;
+    border-radius: 50%;
+}
+
+.sleigh .hat-little-santa .hat-top {
+    position: absolute;
+    top: -8em;
+    left: .1em;
+    border-style: solid;
+    border-width: 4em 2em;
+    border-color: transparent transparent red transparent;
+}
+
+.sleigh .head-little-santa .cheek-little-santa {
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+    height: .6em;
+    width: .6em;
+    background-color: #df7b79;
+    border-radius: 50%;
+}
+
+.sleigh .head-little-santa .cheek-little-santa::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1.4em;
+    height: .6em;
+    width: .6em;
+    background-color: #df7b79;
+    border-radius: 50%;
+}
+
+.sleigh .hat-little-santa .hat-circle {
+    position: absolute;
+    top: -4.8em;
+    left: 1.6em;
+    width: 1em;
+    height: 1em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sleigh .hand-little-santa {
+    z-index: 0;
+    position: absolute;
+    top: 2.5em;
+    left: 2.5em;
+    border-color: transparent wheat transparent transparent;
+    border-style: solid;
+    border-width: 0.5em 0.5em;
+}
+
+.sleigh .hand-little-santa::after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    top: -0.5em;
+    left: -2.3em;
+    border-color: transparent transparent transparent wheat;
+    border-style: solid;
+    border-width: 0.5em 0.5em;
+}
+
+.sleigh .button-little-santa {
+    position: absolute;
+    top: 3em;
+    left: 1.9em;
+    width: .2em;
+    height: .2em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sleigh .button-little-santa::before {
+    content: '';
+    position: absolute;
+    top: 0.7em;
+    left: 0;
+    width: .2em;
+    height: .2em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sleigh .button-little-santa::after {
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    width: .2em;
+    height: .2em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sleigh .hold-little-santa {
+    z-index: 1;
+    position: absolute;
+    top: 0.7em;
+    left: 2.7em;
+    border-color: #00B000 transparent transparent transparent;
+    border-style: solid;
+    border-width: 2.1em 0.5em;
+    transform: skew(-30deg);
+}
+
+.sleigh .circle-little-santa {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 3em;
+    height: 3em;
+    width: 3em;
+    background-color: #00B000;
+    border-radius: 50%;
+}
+
+.sleigh .bag {
+    z-index: -2;
+    position: absolute;
+    top: .5em;
+    left: -2em;
+    height: 5em;
+    width: 5em;
+    background-color: darkred;
+    border-radius: 50%;
+}
+
+.sleigh .big-bag .hold {
+    position: absolute;
+    top: -1.2em;
+    left: -1em;
+    border-width: 1em 1em;
+    border-style: solid;
+    border-color: transparent transparent darkred transparent;
+    transform: rotateZ(-10deg);
+}
+
+.sleigh .big-bag .hold::after {
+    content: '';
+    position: absolute;
+    top: -.2em;
+    left: -1.1em;
+    border-width: 0.5em .5em;
+    border-style: solid;
+    border-color: transparent transparent darkred transparent;
+    transform: rotateZ(-50deg);
+}
+
+.sleigh .big-bag .hold::before {
+    content: '';
+    position: absolute;
+    top: -.2em;
+    left: .3em;
+    border-width: .5em .5em;
+    border-style: solid;
+    border-color: transparent transparent darkred transparent;
+    transform: rotateZ(50deg);
+}
+
+.sleigh .big-bag .rope {
+    position: absolute;
+    top: -.5em;
+    left: -.7em;
+    height: 1em;
+    width: 1.7em;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    border-radius: 50%;
+}
+
+.third-page {
+    z-index: 11;
+    position: relative;
+    display: inline-block;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*santa claus*/
+.santa-claus {
+    position: relative;
+    top: 5em;
+    left: 10em;
+}
+
+.santa-claus .head .face {
+    position: relative;
+    top: 5em;
+    left: 5em;
+    overflow: hidden;
+    background: #F5D2B9;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+}
+
+.santa-claus .head .beard {
+    position: absolute;
+    left: 5em;
+    width: 10em;
+    height: 5em;
+    background: #fff;
+    border-radius: 0 0 200px 200px;
+}
+
+.santa-claus .head .nose {
+    position: absolute;
+    background: #F59699;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    top: 9.5em;
+    left: 9.5em;
+}
+
+.santa-claus .head .beard::before, .santa-claus .head .beard::after {
+    content: '';
+    display: inline-block;
+    width: 4em;
+    height: 2.5em;
+    background: #e5eee5;
+    transform: translateX(.9em);
+}
+
+.santa-claus .head .beard:before {
+    border-radius: 70% 0;
+}
+
+.santa-claus .head .beard:after {
+    border-radius: 0 70%;
+}
+
+/*.eyes .left:before, .eyes .right:before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    width: 4em;*/
+/*    height: 4em;*/
+/*    background: #F59699;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*.eyes .left:before {*/
+/*    left: -30px;*/
+/*}*/
+
+/*.eyes .right:before {*/
+/*     left: 2em;*/
+/*}*/
+
+.eyes .right span {
+    position: absolute;
+    top: 8em;
+    left: 8em;
+    background: #0072CB;
+    width: 1em;
+    height: 1em;
+    display: block;
+    border-radius: 1em;
+}
+
+.eyes .left span {
+    position: absolute;
+    top: 8em;
+    left: 11em;
+    background: #0072CB;
+    width: 1em;
+    height: 1em;
+    display: block;
+    border-radius: 1em;
+}
+
+.eyes .left:after, .eyes .right:after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 1em;
+    background: #fff;
+}
+
+.eyes .right:after {
+    top: 6.6em;
+    left: 10.5em;
+    border-radius: 0 2em;
+}
+
+.eyes .left:after {
+    top: 6.6em;
+    left: 7.5em;
+    border-radius: 2em 0;
+}
+
+.santa-claus .body {
+    position: relative;
+    top: 0;
+    left: 4em;
+    width: 12em;
+    height: 16em;
+    background: #E74700;
+    border-radius: 200px;
+    z-index: -1;
+}
+
+.santa-claus .body:after {
+    content: '';
+    background: #F1E6D9;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 74px;
+}
+
+.left-hand {
+    width: 5em;
+    height: 3em;
+    border-bottom: 40px solid #E74700;
+    border-left: 40px solid #E74700;
+    border-bottom-left-radius: 200px;
+    position: absolute;
+    left: -6em;
+    top: -.9em;
+}
+
+.right-hand {
+    background: #E74700;
+    width: 200px;
+    border-radius: 200px 200px 0 0;
+    left: 2em;
+    height: 120px;
+    position: relative;
+    top: 1.6em;
+}
+
+.left-hand:before, .right-hand:before {
+    content: '';
+    background: #fff;
+    height: 20px;
+    display: block;
+    position: absolute;
+    width: 47px;
+}
+
+.left-hand:after, .right-hand:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: #F5D2B9;
+}
+
+.left-hand:before {
+    left: -2.8em;
+    transform: rotate(-11deg);
+    top: -0.3em;
+}
+
+.left-hand:after {
+    left: -2.8em;
+    top: -1.5em;
+    transform: rotate(-11deg);
+    border-radius: 40px 40px 0 0;
+}
+
+.right-hand:before {
+    right: -.2em;
+    bottom: -.25em;
+    width: 3em;
+}
+
+.right-hand:after {
+    right: 0;
+    bottom: -1.5em;
+    border-radius: 0 0 40px 40px;
+}
+
+.cap {
+    position: relative;
+    width: 8em;
+    height: 3em;
+    background: #E74700;
+    border-radius: 100px 0;
+    top: -23em;
+    left: 7em;
+}
+
+.cap:before, .cap:after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 1em;
+    background: #fff;
+}
+
+.cap:before {
+    border-radius: 30px 0;
+    right: -2em;
+    top: -1em;
+}
+
+.cap:after {
+    border-radius: 0 30px;
+    right: -2em;
+    top: 0;
+}
+
