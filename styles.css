@@ -260,7 +260,7 @@ body {
 }
 
 .open-page {
-    /*display: none;*/
+    display: none;
     overflow: hidden;
     height: 100vh;
     width: 100%;
@@ -810,7 +810,7 @@ body {
 /*second page*/
 .second-page {
     z-index: 11;
-    /*display: none;*/
+    display: none;
     overflow: hidden;
     position: relative;
     height: 100vh;
@@ -818,7 +818,7 @@ body {
     margin: 0;
     padding: 0;
     /*background: radial-gradient(ellipse at top right, #1B2957 0%, blue 100%);*/
-    background: linear-gradient(to bottom, #1B2957, blue);
+    background: linear-gradient(to bottom, #1B2957, cornflowerblue);
 }
 
 .second-page .description {
@@ -1155,10 +1155,12 @@ body {
 
 /*sleigh*/
 .sleigh {
+    z-index: 16;
     position: absolute;
-    top: 200px;
-    left: 300px;
-    transform: rotateY(-180deg);
+    bottom: 0;
+    left: 125px;
+    transform: rotateZ(-10deg);
+    /*transform: rotateY(-180deg);*/
 }
 
 .spiral {
@@ -1495,19 +1497,24 @@ body {
 
 .third-page {
     z-index: 11;
-    /*display: none;*/
+    display: none;
     position: relative;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: cornflowerblue;
 }
 
 /*santa claus*/
 .santa-claus {
+    float: right;
+    height: 80vh;
+    width: 30%;
+    font-size: 1.5em;
+    display: inline;
     position: relative;
-    top: 5em;
-    left: 10em;
+    top: -23.6em;
 }
 
 .santa-claus .head .face {
@@ -1631,20 +1638,20 @@ body {
 .santa-claus .body:after {
     content: '';
     background: #F1E6D9;
-    width: 46px;
-    height: 46px;
+    width: 3em;
+    height: 4em;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    top: 74px;
+    top: 4em;
 }
 
 .left-hand {
     width: 5em;
     height: 3em;
-    border-bottom: 40px solid #E74700;
-    border-left: 40px solid #E74700;
+    border-bottom: 3em solid #E74700;
+    border-left: 3em solid #E74700;
     border-bottom-left-radius: 200px;
     position: absolute;
     left: -6em;
@@ -1653,40 +1660,40 @@ body {
 
 .right-hand {
     background: #E74700;
-    width: 200px;
+    width: 11em;
     border-radius: 200px 200px 0 0;
     left: 2em;
-    height: 120px;
+    height: 10em;
     position: relative;
-    top: 1.6em;
+    top: 1.1em;
 }
 
 .left-hand:before, .right-hand:before {
     content: '';
     background: #fff;
-    height: 20px;
+    height: 1.5em;
     display: block;
     position: absolute;
-    width: 47px;
+    width: 3.2em;
 }
 
 .left-hand:after, .right-hand:after {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 20px;
+    width: 3em;
+    height: 2em;
     background: #F5D2B9;
 }
 
 .left-hand:before {
-    left: -2.8em;
+    left: -3.2em;
     transform: rotate(-11deg);
-    top: -0.3em;
+    top: -0.8em;
 }
 
 .left-hand:after {
-    left: -2.8em;
-    top: -1.5em;
+    left: -3.4em;
+    top: -2.7em;
     transform: rotate(-11deg);
     border-radius: 40px 40px 0 0;
 }
@@ -1698,8 +1705,8 @@ body {
 }
 
 .right-hand:after {
-    right: 0;
-    bottom: -1.5em;
+    right: -.2em;
+    bottom: -2.2em;
     border-radius: 0 0 40px 40px;
 }
 
@@ -1733,3 +1740,78 @@ body {
     top: 0;
 }
 
+/* Remove margins and padding from the list */
+.third-page ul {
+    margin: 0;
+    padding: 0;
+    /*background: transparent;*/
+    text-align: center;
+    columns: 2;
+    list-style: none;
+    width: 50%;
+    /*background: linear-gradient(transparent, rgba(183, 0, 8, 0.4), transparent);*/
+}
+
+/* Style the list items */
+.third-page ul li {
+    color: #fff;
+    background: rgba(2,60,120,0.5);
+    cursor: pointer;
+    position: relative;
+    padding: 3em;
+    font-size: 18px;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 3em;
+    /* make the list items unselectable */
+    user-select: none;
+}
+
+
+.third-page ul li:hover {
+    background: #e74339;
+    opacity: .3;
+}
+
+.third-page ul li.checked {
+    opacity: .5;
+    background: #e74339;
+    text-decoration: underline;
+}
+
+/* Add a "checked" mark when clicked on */
+.third-page ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 45%;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.third-page .sendBtn {
+    position: absolute;
+    /*top: 25em;*/
+    /*right: 10em;*/
+    top: 23em;
+    left: 12.8em;
+    padding: 1.2em;
+    background: #E74700;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.third-page .sendBtn:hover {
+    background-color: rgba(2,60,120,0.5);
+}
