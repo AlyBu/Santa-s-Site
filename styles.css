@@ -260,11 +260,46 @@ body {
 }
 
 .open-page {
-    display: none;
+    /*display: none;*/
     overflow: hidden;
     height: 100vh;
     width: 100%;
     background: radial-gradient(ellipse at top right, cornflowerblue 0%, #1B2957 100%);
+}
+
+.open-page #logo {
+    z-index: 12;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 25%;
+    text-align: center;
+    background: linear-gradient(to right, transparent, black);
+    width: 50em;
+    height: 15em;
+    opacity: .8;
+}
+
+.open-page h1 {
+    font-family: "Lobster";
+    position: absolute;
+    top: -.5em;
+    left: 1.5em;
+    font-style: oblique;
+    color: white;
+    font-size: 8em;
+    display: inline-block;
+}
+
+.open-page h2 {
+    position: absolute;
+    left: 3.5em;
+    bottom: .5em;
+    font-family: "Lobster";
+    color: white;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 0;
 }
 
 .mountain {
@@ -583,6 +618,7 @@ body {
 
 /*snowman*/
 .snowman {
+    display: inline-block;
     z-index: 5;
     position: relative;
     left: 5%;
@@ -774,14 +810,26 @@ body {
 /*second page*/
 .second-page {
     z-index: 11;
-    display: none;
+    /*display: none;*/
     overflow: hidden;
     position: relative;
     height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
-    background: radial-gradient(ellipse at top, #1B2957 0%, darkblue 100%);
+    /*background: radial-gradient(ellipse at top right, #1B2957 0%, blue 100%);*/
+    background: linear-gradient(to bottom, #1B2957, blue);
+}
+
+.second-page .description {
+    position: absolute;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+}
+
+.second-page .description h1 {
+    color: white;
 }
 
 .icicle {
@@ -1447,8 +1495,7 @@ body {
 
 .third-page {
     z-index: 11;
-    display: none;
-    overflow: hidden;
+    /*display: none;*/
     position: relative;
     height: 100vh;
     width: 100%;
